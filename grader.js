@@ -33,6 +33,8 @@ var URL_DEFAULT = "http://shielded-river-3862.herokuapp.com/";
 
 var URL_REGEX = /^(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\'\/\\\+&amp;%\$#\=~])*$/;
 
+var HTMLFILE_DEFAULT = "index.html";
+var CHECKSFILE_DEFAULT = "checks.json";
 
 var assertFileExists = function(infile) {
   var instr = infile.toString();
@@ -132,7 +134,10 @@ if (require.main == module) {
     checkHtmlFile(program.file, program.checks);
 //  var outJson = JSON.stringify(checkJson, null, 4);
 //  console.log(outJson);
-} 
+    .parse(process.argv);
+  var checkJson = checkHtmlFile(program.file, program.checks);
+  var outJson = JSON.stringify(checkJson, null, 4);
+  console.log(outJson);
 else { // using require
   exports.checkHtmlFile = checkHtmlFile;
 }
