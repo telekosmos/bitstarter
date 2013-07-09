@@ -132,12 +132,14 @@ if (require.main == module) {
     checkURL(program.url, program.checks);
   else 
     checkHtmlFile(program.file, program.checks);
+  /*
 //  var outJson = JSON.stringify(checkJson, null, 4);
 //  console.log(outJson);
-    .parse(process.argv);
   var checkJson = checkHtmlFile(program.file, program.checks);
   var outJson = JSON.stringify(checkJson, null, 4);
   console.log(outJson);
+*/
+}
 else { // using require
   exports.checkHtmlFile = checkHtmlFile;
 }
