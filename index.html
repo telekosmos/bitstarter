@@ -1,85 +1,263 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <link type="text/css" rel="stylesheet" 
-          href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
-		<style>
-			.navigation, .pitch, .section1, .section2, .faq, .footer {
-				padding: 10px 0px 10px 0px;
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+		<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+		<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js">
+		</script>
+		<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js">
+				
+		</script>
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic"
+		rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
+		rel="stylesheet" type="text/css">
+		<style type="text/css">
+		/* Large desktop */
+		@media (min-width: 1200px) {  
+			body {
+				padding-top: 60px;
+			}
+			.linediv-l {
+				border-right: 1px solid white;
+			}
+			.linediv-r {
+				border-left: 1px solid white;
+			}
+		}
+ 
+		/* Portrait tablet to landscape and desktop */
+		@media (min-width: 768px) and (max-width: 979px) {  
+		}
+		 
+		/* Landscape phone to portrait tablet */
+		@media (max-width: 767px) { 
+		}
+		 
+		/* Landscape phones and down */
+		@media (max-width: 480px) {
+			.copy {
+				padding: 2.5% 10%;
+			}
+			.linediv-l {
+				border-bottom: 1px solid white;
+			}
+			.linediv-r {
+				border-top: 1px solid white;
 			}
 
-			p.lead {
-				padding-top: 15px;
-			}
-			.video {
-				height: 124px; /* this is order+social+thermo+4*(1px border) */
-				line-height: 124px; /* to vertically center */
-			}
+		}
 
-			.thermometer, .order, .social {
-				height: 40px;
-				line-height: 40px;
-			}
-			.video, .thermometer, .order, .social {
-				border: 1px dotted;
-				text-align: center;
-			}
-			div.row {
-				border: 1px solid black;
-			}
+		/* All form factors */
+		.heading, .subheading {
+			text-align: center;
+		}
+
+		.pitch {
+			padding: 2.5% 0%;
+		}
+
+		.video, .order, .statistics, .thermometer, .social {
+			text-align: center;
+		}
+		
+		.copy {
+			padding-top: 2.5%;
+			padding-bottom: 2.5%;
+			text-align: justify;
+		}
+
+		.asset { /* suppossedly, this is like a wedge to fine arrange the elements */
+			padding: 2.5% 0%;
+		}
+
+		.actions {
+			padding: 3% 0%;
+			background-color: #343434;
+		}
+
+		.order {
+			padding: 2% 0%;
+		}
+
+		p.lead {
+			padding-top: 1.5%;
+			font-size: 24px;
+			/* line-height: 30px; */
+		}
+
+		.actions h3, .actions p {
+			color: white;
+		}
+
+		.footer {
+			text-align: center;
+			color: #cccccc;
+		}
+
+		.footer p {
+			font-size: 11px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		body {
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		}
 		</style>
+
 	</head>
-	<body style="padding-top:20px;padding-bottom:20px">
-		<div style="width:960px" class="container">
-			<div class="row navigation">
-				<div class="span2 logo">Logo</div>
-				<div class="span6">[Blank]</div>
-				<div class="span4 about">About</div>
-			</div>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Bitstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
-			<!-- heading -->
-			<div class="row heading">
-				<div class="span12">
-					<h1>Bitstarter Project</h1>
-				</div>
-			</div>
+    <div class="container">
+    	<div class="row-fluid heading"> <!-- one row -->
+    		<div class="span12">
+    			<h1>Product</h1>
+    		</div>
+    	</div>
+    	<div class="row-fluid subheading"> <!-- just another -->
+    		<div class="span12">
+    			<p class="lead">One sentence description</p>
+    		</div>
+    	</div>
 
-			<!-- subheading -->
-			<div class="row subheading">
-				<div class="span12">
-					<p class="lead">This is my first bitstarter project</p>
-				</div>
-			</div>
+    	<div class="row-fluid pitch"> <!-- another other row -->
+    		<div class="span5 offset1 video">
+    			<img src="http://placehold.it/480x300" class="img-polaroid"/>
+    		</div>
+    		<!-- actions are actions on the page: preorder, FB, twitter, statitics, progres... -->
+    		<div class="span5 actions"> 
+    			<!-- stats -->
+    			<div class="span8 offset2">
+    				<div class="statistics">
+    				<div class="span4">
+    					<div class="linediv-l">
+    					<h3>1000</h3>
+    					<p>backers</p>  
+    					</div>
+    				</div>
+    				<div class="span4">
+    					<div class="linediv-c">
+    					<h3>$6000</h3>
+    					<p>of $10,000</p>
+    					</div>
+    				</div>
+    				<div class="span4">
+    					<div class="linediv-r">
+    						<h3>10</h3>
+    						<p>days left</p>
+    					</div>
+    				</div>
+    				</div>
+    			</div>
 
-			<div class="row pitch">
-				<div class="span6 video">Video</div>
-				<div class="span6">
-					<div class="thermometer">Thermometer</div>
-					<div class="order">Order!!!</div>
-					<div class="social">Social</div>
-				</div>
-			</div>
+    			<!-- progress -->
+    			<div class="span10 offset1">
+				    <div class="progress">
+					    <div class="bar bar-success" style="width: 65%;"></div>
+					    <div class="bar bar-warning" style="width: 35%;"></div>
+					  </div>
+    			</div>
+    			<!-- preorder -->
+    			<div class="span6 offset3 order" style="text-align: center;">
+    					<button class="btn btn-large btn-success" type="button">Preorder</button>
+    			</div>
+    			<!-- "social" -->
+    			<div class="span8 offset2 social">
+    				<button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+    				<button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+    			</div>
 
-			<div class="section1 row">
-				<div class="span12">Marketing section 1</div>
-			</div>
+    		</div>
+    	</div>
 
-			<div class="section2 row">
-				<div class="span12">Marketing section 2</div>
-			</div>
+    	<div class="row-fluid section1"> <!-- another other row -->
+    		<div class="span5 offset1 asset">
+    			<img src="http://placehold.it/480x300" class="img-polaroid"/>
+    		</div>
+    		<div class="span5 copy">
+    			<p>
+    			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu mollis justo velit at nunc. Fusce nec egestas sem. Donec fringilla ante lectus, a pellentesque lacus dignissim ac. Sed volutpat lorem ut congue malesuada. In facilisis scelerisque turpis sed lacinia. Donec in orci lectus. Donec auctor semper quam, eget rhoncus purus fringilla id. Phasellus id nibh eu risus ultrices adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu mollis justo velit at nunc. Fusce nec egestas sem. Donec fringilla.
+    			</p>
+    		</div>
+    	</div>
 
-			<div class="row faq">
-				<div class="span12">FAQs</div>
-			</div>
+    	<div class="row-fluid section2"> <!-- another other row -->
+    		<div class="span5 offset1 copy">
+    			<p>
+    			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu mollis justo velit at nunc. Fusce nec egestas sem. Donec fringilla ante lectus, a pellentesque lacus dignissim ac. Sed volutpat lorem ut congue malesuada. In facilisis scelerisque turpis sed lacinia. Donec in orci lectus. Donec auctor semper quam, eget rhoncus purus fringilla id. Phasellus id nibh eu risus ultrices adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu mollis justo velit at nunc. Fusce nec egestas sem. Donec fringilla.
+    			</p>
+    		</div>
+    		<div class="span5 asset">
+    			<img src="http://placehold.it/480x300" class="img-polaroid"/>
+    		</div>
+    	</div>
 
-			<div class="row footer">
-				<div class="span12">footer</div>
-			</div>
+    	<!-- the FAQ section -->
+    	<div class="row-fluid">
+    		<div class="span10 offset1">
+    			<h3>FAQ</h3>
+    		
+    			<div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  What does FAQ stands for?
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Frequently Answer Question(s)
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  What's a Frequently Answer Question?
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  A question which is commonly asked by users.
+                </div>
+              </div>
+            </div>
+    			</div>
+    		</div>
+    	</div>
 
-		</div> <!-- EO container -->
+    	<!-- footer -->
+    	<div class="row-fluid">
+    		<div class="span12 footer">
+    			<p>This work is licensed under the CC By-SA 3.0 , without all the cruft that would otherwise be put at the bottom of the page.
+    			</p>
+    		</div>
+    	
+    </div> <!-- EO container -->
 	</body>
+
 </html>
-
-
